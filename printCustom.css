@@ -25,7 +25,7 @@ body,
 .left-box,
 .right-box{
     width: 50%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .box1{
@@ -50,19 +50,28 @@ body,
 }
 
 .field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 0 10px 10px 0;
 }
 
 .field-name{
-    width: 100%;
+    width: fit-content;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    margin: 0 5px 10px 0;
+    margin: 0 5px 0 0;
 }
 
 .field-value{
+    width: auto;
+    flex: 1;
     border-bottom: 1px solid #000;
     padding: 2px 0 5px;
     font-size: 16px;
+}
+
+.field-schoolName{
+    width: 50%;
 }
