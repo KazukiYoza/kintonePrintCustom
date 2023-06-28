@@ -64,4 +64,5 @@ body,
 .field-value{
     border-bottom: 1px solid #000;
     padding: 2px 0 5px;
+    font-size: 18px;
 }
