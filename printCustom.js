@@ -25,14 +25,6 @@
         'groupType',
         ];
 
-        let objFields = {};
-        for (let i = 0; i < fields.length; i++) {
-            let field = fields[i];
-            objFields[fieldsKey[i]] = field;
-        }
-
-        console.log(objFields);
-
         const fields2 = 
         [
         '郵便番号',
@@ -49,18 +41,18 @@
         $('.inner').append("<div class='left-box'></div>");
         $('.inner').append("<div class='right-box'></div>");
         $('.left-box').append("<div class='box1'></div>");
-        for (let i = 0; i < objFields.length; i++) {
-            let field = objFields[i].value;
+        for (let i = 0; i < fields.length; i++) {
+            let field = fields[i];
             let el = kintone.app.record.getFieldElement(field);
             let elText = el.innerText;
-            $('.box1').append(`<div class="field field-${objFields[i].key}"><span class="field-name">${field}</span><span class="field-value">${elText}</span></div>`);
+            $('.box1').append(`<div class="field field-${field}"><span class="field-name">${field}</span><span class="field-value">${elText}</span></>`);
         }
         $('.left-box').append("<div class='box2'></div>");
         for (let i = 0; i < fields2.length; i++) {
             let field = fields2[i];
             let el = kintone.app.record.getFieldElement(field);
             let elText = el.innerText;
-            $('.box2').append(`<div class="field field-${i}"><span class="field-name">${field}</span>${elText}</div>`);
+            $('.box2').append(`<p class="field field-${i}"><span class="field-name">${field}</span>${elText}</p>`);
         }
     });
 })();
